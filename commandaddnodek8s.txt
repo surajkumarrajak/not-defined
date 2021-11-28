@@ -5,3 +5,8 @@ kubeadm join 10.0.2.15:6443 --token zqwwex.zw6zco3r7vimah1x \
 	
 	
 	kubeadm join 10.0.2.15:6443 --token 20jufl.ml9dqkgaj5nymgpg --discovery-token-ca-cert-hash sha256:e12a3efd9eb920e8d62c18e9b777de9b969b7c01ffa13b6bb6119ca997098a87 
+
+
+
+kubeadm join 192.168.0.109:6443 --token ptc728.ur14v7x64h1l0srf \
+	--discovery-token-ca-cert-hash sha256:3d9e14abcb4632eb0972662943df9648dccc55db3f8c639f78dc5573d2dece3f
