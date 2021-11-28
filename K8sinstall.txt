@@ -1,0 +1,80 @@
+    1  sudo apt-get update
+    2  cat << EOF | sudo tee /etc/modules-load.d/containerd.conf overlay br_netflilter EOF
+
+
+
+    3  cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf overlay br_netflilter EOF
+
+
+
+sudo modprobe overlay
+sudo modeprobe br_netfilter
+
+    4  sudo apt-get instll -y docker.io 
+    5  sudo apt-get install -y docker.io 
+    6  sudo apt-get install -y apt-transport-https curl
+    7  curl
+    8  curl -s https://packages.cloud.google.com/apt/doc/ap-get.gpg | apt-key add-
+    9  curl -s https://packages.cloud.google.com/apt/doc/apt-get.gpg | apt-key add-
+   10  curl -s https://packages.cloud.google.com/apt/doc/apt-get.gpg | apt-key add -
+   11  sudo curl -s https://packages.cloud.google.com/apt/doc/apt-get.gpg | apt-key add -
+   12  curl -s https://packages.cloud.google.com/apt/doc/apt-get.gpg | sudo apt-key add -
+   13  cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf overlay br_netflilter EOF
+sudo modprobe overlay
+sudo modeprobe br_netfilter
+
+/
+cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf overlay br_netflilter EOF
+sudo modprobe overlay
+sudo modeprobe br_netfilter
+
+   14  cat << EOF | sudo tee /etc/modules-load.d/containerd.conf overlay br_netflilter EOF
+
+
+
+
+   15  cat << EOF | sudo tee /etc/modules-load.d/containerd.conf overlay br_netflilter EOF sudo
+
+
+
+
+
+   16  cat << EOF | sudo tee /etc/modules-load.d/containerd.conf overlay br_netflilter EOF sudo modeprobe overlay
+   17  cat << EOF | sudo tee /etc/modules-load.d/containerd.conf overlay br_netflilter
+sudo modprobe overlay
+sudo modprobe br_netfilter
+EOF
+
+   18  cat <<EOF | sudo tee /etc/sysctl.d/99-kebrnetes-cri.conf
+net.bridge.bridge-nf-call-iptables = 1
+net.ipv4.ip_forward = 1
+net.bridge.bridge-nf-call-ip6tables = 1
+EOF
+
+   19  sudo sysctl --system
+   20  sudo apt-get update && sudo apt-get install -y containerd
+   21  sudo apt-get install -y containerd
+   22  sudo mkdir -p /etc/conatinerd
+   23  sudo containerd config default | sudo tee /etc/containerd/config.toml
+   24  sudo systemctl restart containerd
+   25  sudo systemctl status containerd
+   26  sudo swapoff -a
+   27  sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+   28  sudo apt-get update && suode apt-get install -y apt-transport-https curl
+   29  sudo apt-get update && sudo apt-get install -y apt-transport-https curl
+   30  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+   31  cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
+deb https://apt.kubernetes.io/kubernetes-xenial main
+EOF
+
+   32  sudo apt-get update
+   33  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+   34  cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
+deb https://apt.kubernetes.io/ kubernetes-xenial main
+EOF
+
+   35  sudo apt-get update
+   36  audo apt-get install -y kubelet=1.21.0-00 kubeadm=1.21.0-00 kubectl=1.21.0-00
+   37  sudo apt-get install -y kubelet=1.21.0-00 kubeadm=1.21.0-00 kubectl=1.21.0-00
+   38  sudo apt-mark hold kubelet kubeadm kubectl
+   39  history > K8sinstall.txt
