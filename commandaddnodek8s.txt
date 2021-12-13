@@ -1,3 +1,10 @@
 
 kubeadm join 192.168.0.111:6443 --token tgy3c4.ypuwywnldorc0ism \
 	--discovery-token-ca-cert-hash sha256:94510f8367fcc62f8e5b0a0592cb7888594774cb34f080ff3a86a1337cfca799 
+	
+	
+	AKIAT53UZ5JHRVTVT2B2
+mAQDECQtPhveujqEEGUbVGM+dRYZvIWmlR/88wPQ
+
+
+270291036751.dkr.ecr.us-east-2.amazonaws.com/assignment-2
