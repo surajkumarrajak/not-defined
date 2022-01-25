@@ -1,9 +1,9 @@
-name: "GKE Terraform"
+name: "AWS Terraform"
 
 on:
   push:
     paths:
-    - 'gke_tf/**'
+    - 'aws_tf/**'
     - 'worker_nodes/**' 
     branches:
       - master
@@ -12,12 +12,12 @@ on:
 jobs:
   terraform:
     env:
-        GOOGLE_CREDENTIALS: ${{ secrets.GCP_SECRET }}
+        AWS_CREDENTIALS: ${{ secrets.AWS_SECRET }}
     name: "Terraform"
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        working-directory: [gke_tf, worker_nodes]
+        working-directory: [aws_tf, worker_nodes]
     defaults:
       run:
         working-directory: ${{ matrix.working-directory }}
@@ -55,7 +55,7 @@ jobs:
     steps:    
       - id: get-credentials
         if: github.ref == 'refs/heads/master' && github.event_name == 'push' 
-        uses: google-github-actions/get-gke-credentials@main
+        uses: aws-github-actions/get-gke-credentials@main
         with:
           cluster_name: production-cluster
           location: us-east1
