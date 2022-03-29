@@ -12,3 +12,6 @@ mAQDECQtPhveujqEEGUbVGM+dRYZvIWmlR/88wPQ
  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
  
  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
+
+
+mongo --host aba5c047ef72642c3b12a0ecb93b2a7a-1325301179.ap-south-1.elb.amazonaws.com --port 27017
