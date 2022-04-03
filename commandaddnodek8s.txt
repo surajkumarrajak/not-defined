@@ -15,3 +15,22 @@ mAQDECQtPhveujqEEGUbVGM+dRYZvIWmlR/88wPQ
 
 
 mongo --host aba5c047ef72642c3b12a0ecb93b2a7a-1325301179.ap-south-1.elb.amazonaws.com --port 27017
+
+db.createUser({user:"testUser1", pwd:"passwd", roles:[{role:"readWrite", db:"db1"},{role:"read", db:"db2"},{ role: "listDatabase", db:"admin" }]});
+docker run --rm --name mongodb -v $(pwd):/data/app --net="host" bitnami/mongodb:latest mongodump -u my-user -p 0123456 -o /data/app 
+docker run --rm --name mongodb -v $(pwd):/app --net="host" bitnami/mongodb:latest mongorestore -u root -p $MONGODB_ROOT_PASSWORD /app
+
+
+----connectmongodb----
+kubectl exec -it example-mongodb-0 -n mongod bash
+mongo -u username -p password
+----createrole----
+db.runCommand({createRole: "listDatabases", privileges: [{ resource: { cluster: true }, actions: ["listDatabases"]} ], roles: [] });
+----create user----
+db.createUser({user:"user", pwd:"passwd", roles:[{role:"readWrite", db:"db1"},{role:"read", db:"db2"},{ role: "listDatabases", db:"admin" }]});
+----restore-----
+docker run --rm --name mongodb -v $(pwd):/data/app --net="host" bitnami/mongodb:latest mongorestore --host localhost --port 27017 --db db1 --authenticationDatabase admin
+----backup------
+docker run --rm --name mongodb -v $(pwd):/data/app --net="host" bitnami/mongodb:latest mongodump --host localhost --port 27017 --db db1 --authenticationDatabase admin
+
+
