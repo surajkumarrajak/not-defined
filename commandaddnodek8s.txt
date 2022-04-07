@@ -33,4 +33,5 @@ docker run --rm --name mongodb -v $(pwd):/data/app --net="host" bitnami/mongodb:
 ----backup------
 docker run --rm --name mongodb -v $(pwd):/data/app --net="host" bitnami/mongodb:latest mongodump --host localhost --port 27017 --db db1 --authenticationDatabase admin
 
+helm install mongodb bitnami/mongodb --namespace uber-mongo --set replicaSet.enabled=true --set auth.enabled=false --set externalAccess.enabled=true --set service.type=LoadBalancer
 
